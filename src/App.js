@@ -67,7 +67,10 @@ function App() {
       <ul style={{ listStyleType: "none" }}>
         {musicCollection[music].map((music) => (
           <li>
-            {music.name},{music.rating}
+            <div className='musiclist'>
+              <span className="heading">{music.name}</span>
+              <div style={{ fontSize: "smaller" }}>{music.rating}</div>
+            </div>
           </li>
         ))}
       </ul>
