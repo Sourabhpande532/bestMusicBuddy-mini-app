@@ -4,7 +4,7 @@ By sourabh pande
  ![sourabh](https://img.shields.io/badge/sourabh--Pande-JS--Developer-green)
 
 ---
-## This is an music buddy's app made with pure javascript it will help you to get into your zone by listning you'r favourite songs.
+## This is an music buddy's app made with pure React Js it will help you to get into your zone by listning you'r favourite songs.
 
 ---
 ## Technologies used
@@ -14,6 +14,8 @@ By sourabh pande
 > HTML
 
 > CSS
+
+> React
 ---
 
 
