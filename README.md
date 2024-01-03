@@ -9,18 +9,16 @@ By sourabh pande
 ---
 ## Technologies used
 
-> JavaScript
-
 > HTML
 
 > CSS
 
-> React
+> React Js
 ---
 
 
 [ <img src= "https://img.shields.io/badge/Go LiVE-1DA1F?style=for-the-badge&logo=&logoColor=white" />](https://best-music-buddy-mini-app.vercel.app/) 
 
 
-## ![website](./images/music.png)
+## ![website](./images/musisbuddy.png)
 ---
