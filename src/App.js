@@ -3,7 +3,6 @@ import { useState } from "react";
 
 function App() {
   const [music, setMusic] = useState("Latest");
-
   const musicCollection = {
     Latest: [
       {
@@ -48,10 +47,11 @@ function App() {
       },
     ],
   };
-
+  // console.log(musicCollection["Latest"])
   const musicStore = Object.keys(musicCollection);
-  ("");
+  // console.log(musicStore);
   const handleClickBtn = (buttonType) => {
+    // console.log(buttonType);
     setMusic(buttonType);
   };
   return (
@@ -68,7 +68,7 @@ function App() {
         {musicCollection[music].map((music) => (
           <li>
             <div className='musiclist'>
-              <span className='heading'>{music.name}</span>
+              <span className="heading">{music.name}</span>
               <div style={{ fontSize: "smaller" }}>{music.rating}</div>
             </div>
           </li>
