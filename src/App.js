@@ -2,7 +2,9 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [music, setMusic] = useState("Latest");
+  const [selectedMusicCategory, setSelectedMusicCategory] = useState("Latest");
+
+  // Music collection organized by category
   const musicCollection = {
     Latest: [
       {
@@ -18,7 +20,7 @@ function App() {
         rating: "5/3.5",
       },
     ],
-    Spirtual: [
+    Spiritual: [
       {
         name: "Hare Krishana Hare Krishana",
         rating: "5/4",
@@ -47,29 +49,33 @@ function App() {
       },
     ],
   };
-  // console.log(musicCollection["Latest"])
-  const musicStore = Object.keys(musicCollection);
-  // console.log(musicStore);
+
+  // turn it Array of available music categories
+  const musicCategoryStore = Object.keys(musicCollection);
+
+  // Function to handle button clicks and update the selected music category
   const handleClickBtn = (buttonType) => {
-    // console.log(buttonType);
-    setMusic(buttonType);
+    setSelectedMusicCategory(buttonType);
   };
+
   return (
     <div className='App'>
       <h1>🎺🎸Music Buddy's </h1>
       <p>check out my favourite Music. Select a category to get started</p>
-      {musicStore.map((category) => (
+      {musicCategoryStore.map((category) => (
         <button className='faint-btn' onClick={() => handleClickBtn(category)}>
           {category}
         </button>
       ))}
       <hr />
       <ul style={{ listStyleType: "none" }}>
-        {musicCollection[music].map((music) => (
+        {musicCollection[selectedMusicCategory].map((selectedMusicCategory) => (
           <li>
-            <div className='musiclist'>
-              <span className="heading">{music.name}</span>
-              <div style={{ fontSize: "smaller" }}>{music.rating}</div>
+            <div className='music-list'>
+              <span className='heading'>{selectedMusicCategory.name}</span>
+              <div style={{ fontSize: "smaller" }}>
+                {selectedMusicCategory.rating}
+              </div>
             </div>
           </li>
         ))}
